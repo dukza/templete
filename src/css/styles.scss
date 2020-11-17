@@ -1,0 +1,111 @@
+@import './short.scss';
+
+#header{
+    width: 100%;
+    position: relative;
+    #nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .logo{
+            font-weight: $font-weight-med;
+            text-decoration: none;
+            color: $ink;
+        }
+        .menu{
+            margin-left: auto;
+        }        
+    }
+    #nav-web{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        a{
+            font-weight: $font-weight-med;
+            text-decoration: none;
+        }
+        //a:not(:last-child)
+        a:last-child{
+            margin-right: 0;
+        }
+    }    
+}
+
+@media (max-width:576px) { 
+    .container {
+        width: calc(100vw - 3.5rem);
+    }
+    #nav{
+        height: 4.5em;
+        .logo{
+            font-size: 1.75rem;
+        }
+        .menu {
+            font-size: 1.5rem;
+            visibility: visible;
+        } 
+    }
+    #nav-web{
+        visibility: hidden;
+    }
+}
+@media (min-width:576px) {
+    .container {
+        width: calc(100vw - 14rem);
+    }
+    #nav{
+        height: 6em;
+        .logo{
+            font-size: 2.5rem;
+        }
+        .menu {
+            font-size: 1.75rem;
+            visibility: visible;
+        } 
+    }
+    #nav-web{
+        visibility: hidden;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: calc(100vw - 14rem);
+    }
+    #nav{
+      .menu {
+        visibility: visible;
+      } 
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: calc(100vw - 11em);
+    }
+    #nav{
+        .menu {
+            visibility: hidden;
+        } 
+    }
+    #nav-web{
+        visibility: visible;
+        height: 6em;
+        a{
+            font-size: 1rem;
+            margin-right: 2em;
+        }        
+    }  
+}
+@media (min-width: 1200px) {
+    .container {
+        width: calc(100vw - 18rem);
+    }
+
+}
+@media (min-width: 1600px) {
+    .container {
+        width: calc(100vw - 24rem);
+    } 
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(./sanfrancisco-font.css);
+@import './short.scss';
+
+body{
+    font-family: 'SF Text', 'Noto Sans KR', sans-serif;
+    font-weight: $font-weight-normal;
+}
+[lang='number']{
+    font-family:  'Roboto', sans-serif;
+}
+
+html{
+    font-size: 14px;
+}
+// 폰트
+.h{
+    &1{
+        font-size: 2.5rem;
+    }
+    &2{
+        font-size: 2rem;
+    }
+    &3{
+        font-size: 1.75rem;
+    }
+    &4{
+        font-size: 1.5rem;
+    }
+    &5{
+        font-size: 1.25rem;
+    }
+}
+// 간격
+.m{
+    &x-auto{
+        margin: 0px auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+// 레이아웃
+.container {
+    position: relative;
+}
