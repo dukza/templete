@@ -4,12 +4,15 @@ import {BrowserRouter as Router, Route , Redirect, Switch} from "react-router-do
 import './../css/styles.css'
 
 import Header from './Header';
-import brandStory from '../Routes/brand-story';
-import downloads from '../Routes/downloads';
-import faq from '../Routes/faq';
-import guide from '../Routes/guide';
-import logoOverview from '../Routes/logo-overview';
-import showcase from '../Routes/showcase';
+import BrandStory from '../Routes/BrandStory';
+import Downloads from '../Routes/Downloads';
+import Faq from '../Routes/Faq';
+import Guide from '../Routes/Guide';
+import Logo from '../Routes/Guide/Logo';
+import Showcase from '../Routes/Showcase';
+import BrandArchitecture from '../Routes/Guide/BrandArchitecture';
+import Color from '../Routes/Guide/Color';
+import Composition from '../Routes/Guide/Composition';
 
 
 export default () =>(
@@ -17,15 +20,16 @@ export default () =>(
         <>
             <Header/>
             <Switch>
-                <div className="container mx-auto">
-                    <Route path="/" exact component={brandStory}/>
-                    <Route path="/brandStory" exact component={brandStory}/>
-                    <Route path="/guide" component={guide}/>
-                    <Route path="/showcase" component={showcase}/>
-                    <Route path="/downloads" component={downloads}/>
-                    <Route path="/faq" component={faq}/>
-                    <Redirect from="*" to="/" />                    
-                </div>
+                    <Route path="/" exact component={BrandStory}/>
+                    <Route path="/brandStory" exact component={BrandStory}/>
+                    <Route path="/guide/logo" exact component={Logo}/>
+                    <Route path="/guide/brandArchitecture" component={BrandArchitecture}/>
+                    <Route path="/guide/color" component={Color}/>
+                    <Route path="/guide/composition" component={Composition}/>
+                    <Route path="/showcase" component={Showcase}/>
+                    <Route path="/downloads" component={Downloads}/>
+                    <Route path="/faq" component={Faq}/>
+                    <Redirect from="*" to="/" />          
             </Switch>
         </>
     </Router>

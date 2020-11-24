@@ -16,13 +16,12 @@ export default withRouter(({location:{pathname}}) => (
             </div>
             <div id="nav-web">
                 <SLink to="/" current={pathname==='/'}>Brand story</SLink>
-                <SLink to="/guide" current={pathname==='/guide'}>System elements</SLink>
+                <SLink to="/guide/logo" current={pathname===`/guide/logo`}>System elements</SLink>
                 <SLink to="/showcase" current={pathname==='/showcase'}>Showcase</SLink>
                 <SLink to="/downloads" current={pathname==='/downloads'}>Downloads</SLink>
                 <SLink to="/faq" current={pathname==='/faq'}>Help / FAQ</SLink>
+
             </div>    
         </div>        
     </div>
-
-
 ))
