@@ -3,6 +3,7 @@
 body {
   font-family: 'SF Text', 'Noto Sans KR', sans-serif;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 [lang='number'] {
@@ -35,12 +36,6 @@ html {
 
 .mx-auto {
   margin: 0px auto;
-}
-
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 .container {
