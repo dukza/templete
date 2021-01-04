@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/templete/static/css/main.134ce27a.chunk.css",
+    "main.js": "/templete/static/js/main.816f2b88.chunk.js",
+    "main.js.map": "/templete/static/js/main.816f2b88.chunk.js.map",
+    "runtime-main.js": "/templete/static/js/runtime-main.13c2246c.js",
+    "runtime-main.js.map": "/templete/static/js/runtime-main.13c2246c.js.map",
+    "static/js/2.aad95dd3.chunk.js": "/templete/static/js/2.aad95dd3.chunk.js",
+    "static/js/2.aad95dd3.chunk.js.map": "/templete/static/js/2.aad95dd3.chunk.js.map",
+    "index.html": "/templete/index.html",
+    "static/css/main.134ce27a.chunk.css.map": "/templete/static/css/main.134ce27a.chunk.css.map",
+    "static/js/2.aad95dd3.chunk.js.LICENSE.txt": "/templete/static/js/2.aad95dd3.chunk.js.LICENSE.txt",
+    "static/media/common.css": "/templete/static/media/SFMono-SemiboldItalic.b9e8ca5d.otf",
+    "static/media/all.css": "/templete/static/media/fa-solid-900.89a09251.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13c2246c.js",
+    "static/js/2.aad95dd3.chunk.js",
+    "static/css/main.134ce27a.chunk.css",
+    "static/js/main.816f2b88.chunk.js"
+  ]
+}
