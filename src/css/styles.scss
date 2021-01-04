@@ -74,6 +74,9 @@
     .container {
         width: calc(100vw - 14rem);
     }
+    .container-left{
+        left: 7rem;
+    }  
     #nav{
       .menu {
         visibility: visible;
@@ -82,8 +85,11 @@
 }
 @media (min-width: 992px) {
     .container {
-        width: calc(100vw - 11em);
+        width: calc(100vw - 12em);
     }
+    .container-left{
+        left: 6rem;
+    }  
     #nav{
         .menu {
             visibility: hidden;
@@ -102,10 +108,15 @@
     .container {
         width: calc(100vw - 18rem);
     }
-
+    .container-left{
+        left: 9rem;
+    }
 }
 @media (min-width: 1600px) {
     .container {
         width: calc(100vw - 24rem);
     } 
+    .container-left{
+        left: 12rem;
+    }  
 }

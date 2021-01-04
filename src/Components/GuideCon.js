@@ -3,8 +3,6 @@ import Sider from './Sider';
 import styled from "styled-components";
 
 
-
-
 const ConWrap = styled.div`
     display:grid;
     grid-column-gap: 4.8rem;
@@ -16,17 +14,14 @@ const Con = styled.div`
     height:14000px;
 `
 
-
-
-
 const GuideCon = ({children}) => {
     return(
-        <div className="container mx-auto">
+        <>
             <Sider></Sider>
             <ConWrap>
                <Con>{children}</Con>   
             </ConWrap>       
-        </div>
+        </>
     )
 }
 
