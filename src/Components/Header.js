@@ -8,20 +8,15 @@ const SLink = styled(Link)`
 `
 
 export default withRouter(({location:{pathname}}) => (
-    <div id="header">
-        <div className="container mx-auto" >
-            <div id="nav">
-                <a className="logo" href="/">dukyeon's portfolio</a>
-                <a className="menu"><i class="fal fa-bars"></i></a>
-            </div>
-            <div id="nav-web">
-                <SLink to="/" current={pathname==='/'}>About</SLink>
-                <SLink to="/guide/logo" current={pathname===`/guide/logo`}>Works</SLink>
-                <SLink to="/showcase" current={pathname==='/showcase'}>Contact</SLink>
-                {/* <SLink to="/downloads" current={pathname==='/downloads'}>Downloads</SLink>
-                <SLink to="/faq" current={pathname==='/faq'}>Help / FAQ</SLink> */}
-
-            </div>    
-        </div>        
-    </div>
+    <div className="container-md mx-auto" id="header">
+        <div id="nav">
+            <a className="logo" href="/">dukyeon's portfolio</a>
+            <a className="menu"><i className="fal fa-bars"></i></a>
+        </div>
+        <div className="container-md" id="nav-web">
+            <SLink to="/" current={pathname==='/'}>About</SLink>
+            <SLink to="/guide/logo" current={pathname===`/guide/logo`}>Works</SLink>
+            <SLink to="/showcase" current={pathname==='/showcase'}>Contact</SLink>
+        </div>    
+    </div>        
 ))

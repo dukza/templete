@@ -5,7 +5,6 @@ import Router from './Router';
 
 import './../css/all.css';
 import './../css/normalize.css';
-import './../css/common.css';
 import './../css/styles.css';
 
 function App() {

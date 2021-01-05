@@ -1,31 +1,62 @@
 @import './short.scss';
-
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'SF Text', 'Noto Sans KR', sans-serif !important;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    margin: 0;
+    overflow-x: hidden;
+}
+.font-num{
+    font-family: 'Roboto',sans-serif;
+}
 #header{
     width: 100%;
     position: relative;
-    #nav{
+    #nav{        
+        height: 4.5em;
+        width: 100%;
         display: flex;
         align-items: center;
-        width: 100%;
+        transition: height 0.3s ease-in-out;
         .logo{
+            // font-family: 'Xanh Mono', monospace;
+            font-size: 2.8rem;
             font-weight: $font-weight-med;
             text-decoration: none;
             color: $ink;
         }
         .menu{
+            font-size: 2.8rem;
             margin-left: auto;
+            transition: opacity 0.3s ease-in-out;
         }        
     }
     #nav-web{
+        width: auto;
+        height: 12.8rem;
         position: absolute;
         top: 0px;
         right: 0px;
         display: flex;
         align-items: center;
         margin-left: auto;
+        justify-content: end;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
         a{
-            font-weight: $font-weight-med;
+            // font-weight: $font-weight-med;
+            font-size: 2.8rem;
             text-decoration: none;
+            margin-right: 2em;
+            transition: all 0.3s ease-in-out;
         }
         //a:not(:last-child)
         a:last-child{
@@ -33,90 +64,63 @@
         }
     }    
 }
-
+// 모바일
 @media (max-width:576px) { 
-    .container {
-        width: calc(100vw - 3.5rem);
-    }
-    #nav{
-        height: 4.5em;
-        .logo{
-            font-size: 1.75rem;
-        }
-        .menu {
-            font-size: 1.5rem;
-            visibility: visible;
-        } 
-    }
-    #nav-web{
-        visibility: hidden;
+    // .container {
+    //     width: calc(100vw - 3.5rem);
+    // }
+    body{
+        font-size: 1.4rem;
     }
 }
 @media (min-width:576px) {
-    .container {
-        width: calc(100vw - 14rem);
-    }
+    // .container {
+    //     width: calc(100vw - 14rem);
+    // }
+
+}
+// 패드
+@media (min-width: 768px) { 
     #nav{
-        height: 6em;
+        height: 12.8rem !important;
         .logo{
-            font-size: 2.5rem;
-        }
-        .menu {
-            font-size: 1.75rem;
-            visibility: visible;
-        } 
-    }
-    #nav-web{
-        visibility: hidden;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        width: calc(100vw - 14rem);
-    }
-    .container-left{
-        left: 7rem;
-    }  
-    #nav{
-      .menu {
-        visibility: visible;
-      } 
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: calc(100vw - 12em);
-    }
-    .container-left{
-        left: 6rem;
-    }  
-    #nav{
-        .menu {
-            visibility: hidden;
-        } 
-    }
-    #nav-web{
-        visibility: visible;
-        height: 6em;
-        a{
-            font-size: 1rem;
-            margin-right: 2em;
+            font-size: 4.8rem !important;
         }        
-    }  
-}
-@media (min-width: 1200px) {
-    .container {
-        width: calc(100vw - 18rem);
-    }
-    .container-left{
-        left: 9rem;
+        .menu {
+            font-size: 4.8rem !important;
+        } 
     }
 }
-@media (min-width: 1600px) {
-    .container {
-        width: calc(100vw - 24rem);
-    } 
-    .container-left{
-        left: 12rem;
+// 웹
+@media (min-width: 992px) { 
+    #nav{
+        .menu {
+            opacity: 0;
+        } 
+    }
+    #nav-web{
+        opacity: 1 !important;     
     }  
 }
+@media (min-width: 1200px) { 
+} 
+@media (min-width: 1400px) { 
+    #nav-web{
+        a{
+            margin-right: 2.4em !important;
+        }  
+        a:last-child{
+            margin-right: 0 !important;
+        }
+    }  
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1600px;
+    }
+} 
+@media (min-width: 1600px) { 
+    #nav{
+        .logo{
+            font-size: 5.6rem !important;
+        }  
+    }
+}             

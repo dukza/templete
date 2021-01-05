@@ -1,29 +1,59 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'SF Text', 'Noto Sans KR', sans-serif !important;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.font-num {
+  font-family: 'Roboto',sans-serif;
+}
+
 #header {
   width: 100%;
   position: relative;
 }
 
 #header #nav {
+  height: 4.5em;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 #header #nav .logo {
+  font-size: 2.8rem;
   font-weight: 500;
   text-decoration: none;
   color: #222323;
 }
 
 #header #nav .menu {
+  font-size: 2.8rem;
   margin-left: auto;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #header #nav-web {
+  width: auto;
+  height: 12.8rem;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -34,11 +64,20 @@
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #header #nav-web a {
-  font-weight: 500;
+  font-size: 2.8rem;
   text-decoration: none;
+  margin-right: 2em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #header #nav-web a:last-child {
@@ -46,89 +85,46 @@
 }
 
 @media (max-width: 576px) {
-  .container {
-    width: calc(100vw - 3.5rem);
-  }
-  #nav {
-    height: 4.5em;
-  }
-  #nav .logo {
-    font-size: 1.75rem;
-  }
-  #nav .menu {
-    font-size: 1.5rem;
-    visibility: visible;
-  }
-  #nav-web {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 576px) {
-  .container {
-    width: calc(100vw - 14rem);
-  }
-  #nav {
-    height: 6em;
-  }
-  #nav .logo {
-    font-size: 2.5rem;
-  }
-  #nav .menu {
-    font-size: 1.75rem;
-    visibility: visible;
-  }
-  #nav-web {
-    visibility: hidden;
+  body {
+    font-size: 1.4rem;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: calc(100vw - 14rem);
+  #nav {
+    height: 12.8rem !important;
   }
-  .container-left {
-    left: 7rem;
+  #nav .logo {
+    font-size: 4.8rem !important;
   }
   #nav .menu {
-    visibility: visible;
+    font-size: 4.8rem !important;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
-    width: calc(100vw - 12em);
-  }
-  .container-left {
-    left: 6rem;
-  }
   #nav .menu {
-    visibility: hidden;
+    opacity: 0;
   }
   #nav-web {
-    visibility: visible;
-    height: 6em;
-  }
-  #nav-web a {
-    font-size: 1rem;
-    margin-right: 2em;
+    opacity: 1 !important;
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: calc(100vw - 18rem);
+@media (min-width: 1400px) {
+  #nav-web a {
+    margin-right: 2.4em !important;
   }
-  .container-left {
-    left: 9rem;
+  #nav-web a:last-child {
+    margin-right: 0 !important;
+  }
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1600px;
   }
 }
 
 @media (min-width: 1600px) {
-  .container {
-    width: calc(100vw - 24rem);
-  }
-  .container-left {
-    left: 12rem;
+  #nav .logo {
+    font-size: 5.6rem !important;
   }
 }
