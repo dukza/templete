@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Main = () => {
+const Home = () => {
     return(
         <>
             <div className="vh-100 line-12 d-flex align-items-center" style={{marginTop:'-160px'}} id="main">
@@ -9,4 +9,4 @@ const Main = () => {
         </>
     )
 }
-export default Main;
+export default Home;

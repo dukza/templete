@@ -1,2 +1,12 @@
-//https://ko.javascript.info/import-export#ref-4122
-export default () => 'About';
+import React from 'react';
+
+const About = () => {
+    return(
+        <>
+            About
+        </>
+    )
+
+}
+
+export default About;

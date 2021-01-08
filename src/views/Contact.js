@@ -1,2 +1,15 @@
-//https://ko.javascript.info/import-export#ref-4122
-export default () => 'Contact';
+import React from 'react';
+
+
+const Contact = () => {
+    return(
+        <>
+            <div>
+                Contact
+            </div>
+        </>
+    )
+}
+
+
+export default Contact;

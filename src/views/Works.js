@@ -1,2 +1,15 @@
-//https://ko.javascript.info/import-export#ref-4122
-export default () => 'Works';
+import React from 'react';
+
+
+const Works = () => {
+    return(
+        <>
+            <div>
+                Works
+            </div>
+        </>
+    )
+}
+
+
+export default Works;

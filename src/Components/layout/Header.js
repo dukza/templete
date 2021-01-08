@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 
 // const SLink = styled(Link)`
@@ -8,12 +8,12 @@ import styled from "styled-components";
 //     color: ${props => props.current === '/' ? "#ffffff" : "#000"}
 // `
 
-export default () => {
+const Header = () => {
     return(
         <div id="header">
             <div id="nav">
                 <a className="logo letter-spacing--3" href="/">iWill</a>
-                <a className="menu"><i className="fal fa-bars"></i></a>
+                <button className="menu"><i className="fal fa-bars"></i></button>
             </div>
             <div id="nav-web">
                 <Link to="/about">ABOUT</Link>
@@ -24,3 +24,5 @@ export default () => {
         </div>        
     )
 }
+
+export default Header;
