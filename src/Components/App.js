@@ -26,7 +26,7 @@ const App = () => {
   useEffect(()=>{
     let page = location.pathname;
     trackPage(page);
-    console.log('page',page)
+    console.log('page', page)
   },[location])
   return (
     <>
