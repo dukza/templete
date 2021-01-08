@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation, Switch } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
-import Router from './Router';
-import Footer from './Footer';
+import AppRoute from './../utils/AppRoute';
 
+// layout
+import LayoutDefault from '../layouts/LayoutDefault';
 
-import './../css/all.css';
-import './../css/normalize.css';
-import './../css/styles.css';
+// views
+import Main from '../views/Main';
+import About from '../views/About';
+import Works from '../views/Works';
+import Contact from '../views/Contact';
 
-function App() {
+ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+
+const trackPage = page => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
+
+const App = () => {
+  let location = useLocation();
+
+  useEffect(()=>{
+    let page = location.pathname;
+    trackPage(page);
+    console.log('page',page)
+  },[location])
   return (
     <>
-      <Router/>
-      <Footer/>
+        <Switch>
+          <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
+          <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
+          <AppRoute exact path="/works" component={Works} layout={LayoutDefault} />
+          <AppRoute exact path="/contact" component={Contact} layout={LayoutDefault} />
+        </Switch>
     </>
   );
 }

@@ -1,9 +1,20 @@
+@import url(/Users/dyha/study/templete/src/css/normalize.css);
+@import url(/Users/dyha/study/templete/src/css/all.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @font-face {
   font-family: 'NHU';
   font-display: swap;
   src: local("Neue Haas Unica Pro"), local("NeueHaasUnicaPro-Regular"), url("./../font/NHU/NeueHaasUnica-Regular.woff2") format("woff2"), url("./../font/NHU/NeueHaasUnica-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gmarketSans';
+  font-display: swap;
+  src: local("GmarketSans"), local("GmarketSansLight"), url("./../font/GmarketSans/GmarketSansLight.woff2") format("woff2"), url("./../font/GmarketSans/GmarketSansLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +26,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'NHU', 'Noto Sans KR', sans-serif !important;
+  font-family: 'NHU', 'gmarketSans', sans-serif !important;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.1px;
@@ -27,12 +38,22 @@ body {
   font-family: 'Roboto',sans-serif;
 }
 
+.line-10 {
+  line-height: 1;
+}
+
+.line-12 {
+  line-height: 1.2;
+}
+
+.line-15 {
+  line-height: 1.5;
+}
+
 #header {
   width: 100%;
   position: relative;
   padding-top: 2.4rem;
-  padding-left: 2.4em;
-  padding-right: 2.4em;
 }
 
 #header #nav {
@@ -48,16 +69,15 @@ body {
 }
 
 #header #nav .logo {
-  font-size: 3.6rem;
+  font-size: 5.2rem;
   text-decoration: none;
   line-height: 1;
-  color: #222323;
   -webkit-transition: all 0.5s ease-in-out !important;
   transition: all 0.5s ease-in-out !important;
 }
 
 #header #nav .menu {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   margin-left: auto;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
@@ -66,8 +86,8 @@ body {
 #header #nav-web {
   position: absolute;
   top: 2.4rem;
-  left: 2.4em;
-  right: 2.4em;
+  left: 1.6em;
+  right: 1.6em;
   margin-left: auto;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -78,16 +98,15 @@ body {
 }
 
 #header #nav-web a {
-  font-size: 2rem;
   text-decoration: none;
-  margin-right: 1.6em;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#header #nav-web a:last-child {
+#header #nav-web .text {
   margin-left: auto !important;
   margin-right: 0 !important;
+  font-weight: light;
 }
 
 #footer {
@@ -99,7 +118,55 @@ body {
 #footer span {
   position: fixed;
   bottom: 2.4rem;
-  left: 2.4em;
+  left: 1.6em;
+}
+
+#main {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  font-size: 4rem;
+  font-weight: light;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(315deg, #0a14c8, #000000, #0a14c8);
+  background-size: 600% 600%;
+  -webkit-animation: main-bg-animation 10s ease infinite;
+          animation: main-bg-animation 10s ease infinite;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes main-bg-animation {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+@keyframes main-bg-animation {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
 }
 
 .font-88 {
@@ -186,6 +253,10 @@ body {
   body {
     font-size: 1.4rem;
   }
+  #nav {
+    padding-left: 1.6em !important;
+    padding-right: 1.6em !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -202,16 +273,20 @@ body {
     right: 2.4rem;
   }
   #nav .logo {
-    font-size: 4.8rem !important;
+    font-size: 6.4rem !important;
   }
 }
 
 @media (min-width: 768px) {
+  #header #nav-web {
+    left: 3.2rem !important;
+    right: 3.2rem !important;
+  }
   #nav {
     height: 12.8rem !important;
   }
   #nav .logo {
-    font-size: 5.6rem !important;
+    font-size: 8rem !important;
   }
   #nav .menu {
     opacity: 0;
@@ -220,41 +295,47 @@ body {
     opacity: 1 !important;
   }
   #nav-web a {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem;
+    margin-right: 3.6rem;
   }
-  #nav-web a:last-child {
-    font-size: 1rem !important;
-    font-weight: light;
+  #nav-web .text {
+    font-size: 1.2rem !important;
   }
   #footer {
+    font-size: 1.1rem;
     opacity: 1 !important;
+  }
+  #footer span {
+    left: 3.2rem !important;
   }
 }
 
 @media (min-width: 992px) {
   #nav .logo {
-    font-size: 7.2rem !important;
+    font-size: 8.8rem !important;
   }
   #nav-web a {
     font-size: 2rem !important;
-    margin-right: 2em !important;
+    margin-right: 4rem !important;
   }
-  #nav-web a:last-child {
-    font-size: 1.4rem !important;
-    font-weight: light;
+}
+
+@media (min-width: 1280px) {
+  #nav-web a {
+    font-size: 2.2rem !important;
+    margin-right: 4.4rem !important;
   }
 }
 
 @media (min-width: 1480px) {
   #nav .logo {
-    font-size: 6vw !important;
+    font-size: 6.8vw !important;
   }
   #nav-web a {
-    font-size: 2.6rem !important;
-    margin-right: 6rem !important;
+    font-size: 2.8rem !important;
+    margin-right: 5.6rem !important;
   }
-  #nav-web a:last-child {
-    font-size: 1.6rem !important;
-    font-weight: light;
+  #nav-web .text {
+    font-size: 1.2rem !important;
   }
 }
